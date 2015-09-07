@@ -73,7 +73,7 @@ $alumno=$nene2['alumno'];
 $encabezamiento='CURSO: '.$curso."\n".$grupo."\n".'INFORME DE LA EVALUACIÓN FINAL ORDINARIA'."\n ALUMNO:".$nombrealumno;
  $result4=mysql_query("select * from informe3eval where id='$alumno'",$link);
 while($row4 = mysql_fetch_array($result4)) {
-//$encabezamiento='CURSO: '.$curso."\n".$grupo."\n".'INFORME DE LA EVALUACIÓN FINAL ORDINARIA'."\n ALUMNO:".$nombrealumno;
+$encabezamiento='CURSO: '.$curso."\n".$grupo."\n".'INFORME DE LA EVALUACIÓN FINAL ORDINARIA'."\n ALUMNO:".$nombrealumno;
 
 $m1=$row4['m1'];
 $m2=$row4['m2'];
@@ -203,7 +203,7 @@ $pdf->SetFont('Arial','B',8);
 $pdf->Multicell(180,5,'C. INFORMACIÓN COMPLEMENTARIA SOBRE LOS OBJETIVOS, CONTENIDOS Y CRITERIOS DE EVALUACIÓN DESARROLLADOS EN EL TRIMESTRE',1,1,1);
 
 $pdf->SetFont('Arial','',8);
-$pdf->Multicell(180,5,'La programación de objetivos, contenidos y criterios de evaluación trabajados en el trimestre, en cada una de las materias, están a disposición de las familias en Jefatura de Estudios.');
+$pdf->Multicell(180,5,'La programación de objetivos, contenidos y criterios de evaluación trabajados en el trimestre, en cada una de las materias, están a disposición de las familias en Jefatura de Estudios y en la página web del centro.');
 $pdf->Ln(5);
 $pdf->SetFont('Arial','B',8);
 $pdf->Multicell(180,5,'D.PROMOCIÓN',1,1,1);

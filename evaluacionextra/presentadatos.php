@@ -162,7 +162,7 @@ $lecturaobsrend7=$obsrend['obsrend7'];
       <p>&nbsp; </p>
 </fieldset>
 <form id="form1" name="form1" method="post" action="<?php echo $destino; ?>">
- <input type="checkbox" name="pend" value="1" id="pend" <?php if  ($pend==1) {echo "checked";} ?> />EL ALUMNO TIENE MATERIAS PENDIENTES
+ <input type="checkbox" name="pend" value="1" id="pend" <?php if  ($m1==1) {echo "checked";} ?> />EL ALUMNO TIENE MATERIAS PENDIENTES
 <fieldset>
 <legend><strong>1. MEDIDAS DE AMPLIACI&Oacute;N Y REFUERZO</strong></legend>
 

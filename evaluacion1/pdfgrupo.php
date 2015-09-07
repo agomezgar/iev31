@@ -153,7 +153,7 @@ $pdf->SetFont('Arial','B',10);
 $pdf->Multicell(180,5,'C. INFORMACIÓN COMPLEMENTARIA SOBRE LOS OBJETIVOS, CONTENIDOS Y CRITERIOS DE EVALUACIÓN DESARROLLADOS EN EL TRIMESTRE',1,1,1);
 $pdf->Ln(5);
 $pdf->SetFont('Arial','',10);
-$pdf->Multicell(180,5,'La programación de objetivos, contenidos y criterios de evaluación trabajados en el trimestre, en cada una de las materias, están a disposición de las familias en Jefatura de Estudios.');
+$pdf->Multicell(180,5,'La programación de objetivos, contenidos y criterios de evaluación trabajados en el trimestre, en cada una de las materias, están a disposición de las familias en Jefatura de Estudios y en la página web del centro.');
 $pdf->Ln(5);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(180,5,'OBSERVACIONES',0,1);

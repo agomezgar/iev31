@@ -63,7 +63,7 @@ if (isset($d)){echo "Ya se ha rellenado un informe sobre la evaluacion del alumn
 mysql_free_result($result3);
 
   
-    $result4=mysql_query("select * from informe2eval where id='$alumno'",$link);
+    $result4=mysql_query("select * from informe1eval where id='$alumno'",$link);
 while($row4 = mysql_fetch_array($result4)) {
 
 

@@ -74,7 +74,7 @@ $encabezamiento='CURSO: '.$curso."\n".$grupo."\n".'INFORME DE LA SEGUNDA EVALUAC
  $result4=mysql_query("select * from informe2eval where id='$alumno'",$link);
 while($row4 = mysql_fetch_array($result4)) {
 require ('../config.php');
-//$encabezamiento='CURSO: '.$curso."\n".$grupo."\n".'INFORME DE LA PRIMERA EVALUACIÓN'."\n ALUMNO:".$nombrealumno;
+$encabezamiento='CURSO: '.$curso."\n".$grupo."\n".'INFORME DE LA PRIMERA EVALUACIÓN'."\n ALUMNO:".$nombrealumno;
 $m1=$row4['m1'];
 $m2=$row4['m2'];
 $m3=$row4['m3'];
@@ -138,7 +138,7 @@ $pdf->SetFont('Arial','B',10);
 $pdf->Multicell(180,5,'C. INFORMACIÓN COMPLEMENTARIA SOBRE LOS OBJETIVOS, CONTENIDOS Y CRITERIOS DE EVALUACIÓN DESARROLLADOS EN EL TRIMESTRE',1,1,1);
 $pdf->Ln(5);
 $pdf->SetFont('Arial','',10);
-$pdf->Multicell(180,5,'La programación de objetivos, contenidos y criterios de evaluación trabajados en el trimestre, en cada una de las materias, están a disposición de las familias en Jefatura de Estudios.');
+$pdf->Multicell(180,5,'La programación de objetivos, contenidos y criterios de evaluación trabajados en el trimestre, en cada una de las materias, están a disposición de las familias en Jefatura de Estudios y en la página web del centro.');
 $pdf->Ln(5);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(180,5,'OBSERVACIONES',0,1);
