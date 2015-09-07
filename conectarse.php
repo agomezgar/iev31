@@ -39,7 +39,7 @@
 
 function Conectarse()
 {require('config.php');
-   if (!($link=mysql_connect($servidor,$usuario,$contra,false,128)))
+   if (!($link=mysql_connect($servidor,$usuario,$contra)))
    {
       echo "Error conectando a la base de datos.";
       exit();
