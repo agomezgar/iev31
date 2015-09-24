@@ -1,8 +1,0 @@
-<?php
-$servidor = 'localhost';
-$base = 'iev31';
-$usuario = 'root';
-$contra = 'apagonazo';
-$nombrecentro = 'IES Eduardo Valencia';$direccion = 'C/ Cervantes, Calzada de Calatrava (Ciudad Real)';
-$curso = '2012/2013';
-?>
