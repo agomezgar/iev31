@@ -51,7 +51,7 @@ $nombrealumno=$row3['apellidos'].",".$row3['nombre'];?>
 
 echo "DNI: ".$row3['dni']."<p>";
 echo "Fecha de nacimiento: ".$row3['fecha']."<p>";
-echo "domicilio: ".urlencode($row3['prov'])."<p>";
+echo "domicilio: ".urlencode($row3['dom'])."<p>";
  
 
 $result3=mysql_query("select * from informe2eval where id=$alumno",$link);
