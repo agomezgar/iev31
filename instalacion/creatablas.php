@@ -9,7 +9,7 @@
  * version posterior.
  * 
  * Este programa se esta distribuyendo con la esperanza de que sea util 
- * a la comunidad, pero SIN NINGUNA GARANTIA, ¡RECLAMACIONES, AL MAESTRO 
+ * a la comunidad, pero SIN NINGUNA GARANTIA, Â¡RECLAMACIONES, AL MAESTRO 
  * ARMERO!, que decian en la mili. Si te quedas con la duda, examina los
  * terminos de la licencia GNU
  * 
@@ -45,30 +45,34 @@ $crealumnos="CREATE TABLE IF NOT EXISTS alumnos(
 `tf` text NOT NULL ,
 `movil` text NOT NULL ,
 `cp` varchar( 6 ) NOT NULL ,
-`padre` text NOT NULL ,
+`apellidospadre` text NOT NULL ,
 `dnipadre` text NOT NULL ,
-`madre` text NOT NULL ,
+`apellidosmadre` text NOT NULL ,
 `dnimadre` text NOT NULL ,
 `pais` text NOT NULL ,
 `nacion` text NOT NULL ,
-`a` varchar( 20 ) NOT NULL ,
-`b` varchar( 20 ) NOT NULL ,
-`c` varchar( 20 ) NOT NULL ,
-`d` varchar( 20 ) NOT NULL ,
-`e` varchar( 20 ) NOT NULL ,
-`f` varchar( 20 ) NOT NULL ,
-`g` varchar( 20 ) NOT NULL ,
-`h` varchar( 20 ) NOT NULL ,
+`emailalumno` varchar( 20 ) NOT NULL ,
+`emailtutor2` varchar( 20 ) NOT NULL ,
+`emailtutor1` varchar( 20 ) NOT NULL ,
+`tftutor1` varchar( 20 ) NOT NULL ,
+`tftutor2` varchar( 20 ) NOT NULL ,
+`moviltutor1` varchar( 20 ) NOT NULL ,
+`moviltutor2` varchar( 20 ) NOT NULL ,
+`apellido1` text NOT NULL,
+`apellido2` text NOT NULL,
+`tipodom` varchar(20) NOT NULL,
+`ntutor1` text NOT NULL,
+`ntutor2` text NOT NULL,
 PRIMARY KEY ( `alumno` )
 ) ";
-mysql_query($crealumnos,$link) or die ("ALGO FALLÓ
+mysql_query($crealumnos,$link) or die ("ALGO FALLÃ“
 ");
 
 $creamatriculas="CREATE TABLE IF NOT EXISTS matriculas(
 `alumno` varchar( 6 ) NOT NULL ,
-`matricula` varchar( 8 ) NOT NULL ,
 `apellidos` text NOT NULL ,
 `nombre` text NOT NULL ,
+`matricula` varchar( 8 ) NOT NULL ,
 `etapa` varchar( 4 ) NOT NULL ,
 `anno` varchar( 4 ) NOT NULL ,
 `tipo` varchar( 2 ) NOT NULL ,
@@ -84,7 +88,7 @@ $creamatriculas="CREATE TABLE IF NOT EXISTS matriculas(
 
 PRIMARY KEY ( `alumno` )
 ) ";
-mysql_query($creamatriculas,$link) or die ("ALGO FALLÓ
+mysql_query($creamatriculas,$link) or die ("ALGO FALLÃ“
 ");
 	$tablainformes1="CREATE TABLE IF NOT EXISTS informe1eval(
 `id` int( 6 ) NOT NULL ,
@@ -304,7 +308,7 @@ PRIMARY KEY ( `id` )
 mysql_free_result;
 mysql_query($tablaitems,$link);
 
-mysql_query("insert into tablaitems (item1,item2,item3,item4,item5,item6,item7) values ('Refuerzo de habilidades instrumentales: lectura comprensiva, expresión escrita...','Incrementar el tiempo de trabajo en casa','Entrega puntual de trabajos y tareas escolares','Potenciar la implicación de la familia','Asistencia puntual y regular a clase','Mejorar comportamiento y disciplina en el aula','Mejorar la integración en el aula')",$link);
+mysql_query("insert into tablaitems (item1,item2,item3,item4,item5,item6,item7) values ('Refuerzo de habilidades instrumentales: lectura comprensiva, expresiÃ³n escrita...','Incrementar el tiempo de trabajo en casa','Entrega puntual de trabajos y tareas escolares','Potenciar la implicaciÃ³n de la familia','Asistencia puntual y regular a clase','Mejorar comportamiento y disciplina en el aula','Mejorar la integraciÃ³n en el aula')",$link);
 mysql_free_result;
 
 
@@ -321,7 +325,7 @@ PRIMARY KEY ( `id` )
 mysql_free_result;
 mysql_query($tablaitemspromocion,$link);
 
-mysql_query("insert into tablaitemspromocion (promo1,promo2,promo3,promo4,promo5) values ('Promociona por haber superado los objetivos de las materias cursadas.','Promociona por haber superado los objetivos de las materias cursadas, con una materia suspensa.','Promociona por haber superado los objetivos de las materias cursadas, con dos materias suspensas.','Promociona por haber permanecido dos años en el mismo curso a pesar de tener varias materias suspensas.','No promociona por tener mas de dos materias suspensas.')",$link);
+mysql_query("insert into tablaitemspromocion (promo1,promo2,promo3,promo4,promo5) values ('Promociona por haber superado los objetivos de las materias cursadas.','Promociona por haber superado los objetivos de las materias cursadas, con una materia suspensa.','Promociona por haber superado los objetivos de las materias cursadas, con dos materias suspensas.','Promociona por haber permanecido dos aÃ±os en el mismo curso a pesar de tener varias materias suspensas.','No promociona por tener mas de dos materias suspensas.')",$link);
 mysql_free_result;
 
 	$tablamedidaspromocion="CREATE TABLE IF NOT EXISTS tablamedidaspromocion(
@@ -354,7 +358,7 @@ PRIMARY KEY ( `id` )
 mysql_free_result;
 mysql_query($tablaobsrendimiento,$link);
 
-mysql_query("insert into tablaobsrendimiento(obsrend1,obsrend2,obsrend3,obsrend4,obsrend5,obsrend6,obsrend7) values ('El alumno/-a tiene mucho interes y trabaja con esfuerzo y motivacion','En general tiene interes y se esfuerza por sacar adelante sus estudios','Aunque tiene interes y motivación podría esforzarse un poco mas','El rendimiento ha ido aumentando a lo largo del curso','El rendimiento ha ido bajando a lo largo del curso','El alumno/-a no esta nada motivado, no tiene interes y no se esfuerza para superar el curso','Falta mucho a clase y eso repercute en su rendimiento')",$link);
+mysql_query("insert into tablaobsrendimiento(obsrend1,obsrend2,obsrend3,obsrend4,obsrend5,obsrend6,obsrend7) values ('El alumno/-a tiene mucho interes y trabaja con esfuerzo y motivacion','En general tiene interes y se esfuerza por sacar adelante sus estudios','Aunque tiene interes y motivaciÃ³n podrÃ­a esforzarse un poco mas','El rendimiento ha ido aumentando a lo largo del curso','El rendimiento ha ido bajando a lo largo del curso','El alumno/-a no esta nada motivado, no tiene interes y no se esfuerza para superar el curso','Falta mucho a clase y eso repercute en su rendimiento')",$link);
 mysql_free_result;
 
 
