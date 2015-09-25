@@ -9,7 +9,7 @@
  * version posterior.
  * 
  * Este programa se esta distribuyendo con la esperanza de que sea util 
- * a la comunidad, pero SIN NINGUNA GARANTIA, ¡RECLAMACIONES, AL MAESTRO 
+ * a la comunidad, pero SIN NINGUNA GARANTIA, Â¡RECLAMACIONES, AL MAESTRO 
  * ARMERO!, que decian en la mili. Si te quedas con la duda, examina los
  * terminos de la licencia GNU
  * 
@@ -31,7 +31,7 @@
 
 <html>
 <head>
-   <title>CONEXIÓN</title>
+   <title>CONEXIÃ“N</title>
 </head>
 <body>
 <?php
@@ -39,7 +39,7 @@
 
 function Conectarse()
 {require('../config.php');
-   if (!($link=mysql_connect($servidor,$usuario,$contra)))
+   if (!($link=mysql_connect($servidor,$usuario,$contra,false,128)))
    {
       echo "Error conectando a la base de datos.";
       exit();
